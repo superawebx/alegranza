@@ -1,0 +1,40 @@
+@extends('layouts.master')
+
+@section('content')
+
+    <h4 class="font-weight-bold py-3 mb-4">
+        <span class="text-muted font-weight-light">Lista de /</span> Texto Contratos
+    </h4>
+
+    <div align="right">
+       <a href="<?= url('textocontrato/adicionar'); ?>"> <button type="button" class="btn btn-primary">Novo</button></a>
+    </div>
+    <br>
+    <div class="card">
+       <table class="table table-bordered">
+            <thead class="thead-light">
+            <tr>
+                <th>Id</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Tipo</th>
+                <th>Ação</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($registros as $registro)
+            <tr>
+                <th scope="row">{{ $registro->id }}</th>
+                <td>{{ $registro->titulo }}</td>
+                <td>{{ $registro->descricao }}</td>
+                <td>{{ $registro->tipo }}</td>
+                <td align="center">
+                    <a href="<?= url('textocontrato/editar/'.$registro->id ); ?>" class="btn icon-btn btn-sm btn-outline-primary" ><span class="fas fa-user-edit"></span> </a>
+                    <a href="<?= url('textocontrato/deletar/'.$registro->id ); ?>" class="btn icon-btn btn-sm btn-outline-danger"> <span class="fas fa-trash -alt"></span></a>
+                </td>
+            </tr>
+            @endforeach
+           </tbody>
+        </table>
+    </div>
+@endsection
