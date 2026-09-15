@@ -212,7 +212,8 @@ class ContratoController extends Controller
             var_dump(str_replace(',','',$request->valortotal));
            
             \Session::flash('mensagem',['msg'=>'Ateção: O Valor das Parcelas esta diferente do Valor Total do Contrato, Verifique!','class'=>'danger']);
-            return redirect()->action('ContratoController@create');
+            return redirect()->route("contratos.adicionar");
+
         }
 
         if (!empty($request->dataevento2)){
@@ -275,7 +276,7 @@ class ContratoController extends Controller
 
         \Session::flash('mensagem',['msg'=>'Registro realizado com Sucesso','class'=>'success']);
         
-        return redirect()->action('ContratoController@index');
+        return redirect()->route("contratos.listar");
 
     }
 
