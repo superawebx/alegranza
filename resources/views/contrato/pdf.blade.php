@@ -199,14 +199,14 @@
                 </strong>
                 </h8>
             </p>
-            <br><br><br><br>
+            <br><br>
             <p>
                 <h8>
                 ______________________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ______________________________<br>                           
                 &nbsp;&nbsp;&nbsp;&nbsp;<strong>Assinatura do LOCATÁRIO(A)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Assinatura do LOCADOR</strong>    
                 </h8>
             </p>
-            <br><br><br><br>
+            <br><br>
             <p>
                 <h8>
                 ______________________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ______________________________<br>                           
