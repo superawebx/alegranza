@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Symfony\Component\VarDumper\VarDumper;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ContratoController extends Controller
 {
@@ -346,9 +347,25 @@ class ContratoController extends Controller
             //Valor por extenso
             $valorExtenso = $this->valor_por_extenso($registro[0]->valortotal);
             
-            return view('contrato.pdf', compact('registro','valorExtenso','parcelas','dia','mes','ano'));
+            //return view('contrato.pdf', compact('registro','valorExtenso','parcelas','dia','mes','ano'));
 
-            //return \PDF::loadView('contrato.pdf', compact('registro','valorExtenso','parcelas','dia','mes','ano'))
+            $pdf = Pdf::setOptions(['isRemoteEnabled' => true])
+                        ->loadView('contrato.pdf', compact('registro','valorExtenso','parcelas','dia','mes','ano'));
+
+            // landscape - paissagem
+            // portraint - retrado
+            $pdf->setPaper('a4','portraint');
+
+            //Renderizar o HTML como PDF
+            $pdf->render();
+            
+            $nomePDF = $id .'-'.'contrato.pdf';
+        
+            //return $pdf->download($nomePDF);
+            return $pdf->stream($nomePDF);
+
+
+           // return  \::loadView('contrato.pdf', compact('registro','valorExtenso','parcelas','dia','mes','ano'))
             //Se quiser que fique no formato a4 retrato:
             // ->setPaper('a4', 'landscape')
             //->download($id.'.pdf');

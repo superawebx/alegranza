@@ -4,14 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>:: Adm Evento - Contrato ::</title>
     <!--Custon CSS (está em /public/assets/site/css/certificate.css)-->
-    <!--<link rel="stylesheet" href="{{ asset('lib/assets/vendor/css/rtl/bootstrap.css') }}">-->
+    <link rel="stylesheet" href="{{ asset('lib/assets/vendor/css/rtl/bootstrap.css') }}">
 </head>
 <body>
 
 <div class="row">
     <div class="container">
 
-        <img src="{{ asset("img/logoAlegranza.jpg") }}" width="161" height="72"/>
+        <img src="{{ asset('img/logoAlegranza.jpg') }}" width="161" height="72" />
         <hr>
            <p align="center">
                <h8>
