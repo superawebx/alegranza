@@ -62,7 +62,7 @@ Route::prefix('contratos')->group(function (){
     Route::get('/adicionar',[ContratoController::class, 'create'])->name('contratos.adicionar');
     Route::post('/salvar',[ContratoController::class, 'store'])->name('contratos.salvar');
     Route::get('/pdf/{id}',[ContratoController::class, 'pdf'])->name('contratos.pdf');
-    Route::get('/deletar/{id}',[ContratoController::class, 'destroy'])->name('contratos.destroy');
+    Route::get('/deletar/{id}',[ContratoController::class, 'destroy'])->name('contratos.deletar');
     Route::get('/calendar',[ContratoController::class, 'calendar'])->name('contratos.calendar');
     Route::get('/lixeira/{id}',[ContratoController::class, 'lixeira'])->name('contratos.lixeira');
     Route::get('/listaLixeira',[ContratoController::class, 'listaLixeira'])->name('contratos.listaLixeira');
